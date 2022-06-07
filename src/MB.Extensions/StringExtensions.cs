@@ -6,9 +6,9 @@ namespace MB.Extensions
     {
         public static string Truncate(this string value, int maxlenght, string truncateChars = "")
         {
-            if (string.IsNullOrWhiteSpace(value)) 
-            { 
-                return value; 
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                return value;
             }
 
             if (value.Length > maxlenght)
