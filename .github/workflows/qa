@@ -1,4 +1,4 @@
-name: Publish on NuGet
+name: Quality assessment
  
 on:
   #push:
@@ -13,7 +13,7 @@ env:
   
 jobs:
   build:
-    name: Publish on NuGet
+    name: Quality assessment
     runs-on: ubuntu-latest
 
     steps:
