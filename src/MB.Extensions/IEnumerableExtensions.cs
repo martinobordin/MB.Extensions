@@ -1,6 +1,6 @@
 ﻿namespace MB.Extensions
 {
-    public static class CollectionExtensions
+    public static class IEnumerableExtensions
     {
         public static void ForEach<T>(this IEnumerable<T>? source, Action<T> action)
         {
