@@ -2,21 +2,21 @@
 {
     public static class DateTimeExtensions
     {
+        public static readonly DateTime MinSmallDateTimeValue = new DateTime(1900, 01, 01);
+        public static readonly DateTime MaxSmallDateTimeValue = new DateTime(2079, 06, 06);
+
         public static DateTime ToSmallDateTime(this DateTime value)
         {
-            DateTime minSmallDateTimeValue = new DateTime(1900, 01, 01);
-            DateTime maxSmallDateTimeValue = new DateTime(2079, 06, 06);
+            var convertedDateTime = new DateTime(value.Year, value.Month, value.Day, value.Hour, value.Minute, value.Second);
 
-            var convertedDateTime = new DateTime(value.Year, value.Month, value.Day, value.Hour, value.Minute, 0);
-
-            if (convertedDateTime > maxSmallDateTimeValue)
+            if (convertedDateTime > MaxSmallDateTimeValue)
             {
-                return maxSmallDateTimeValue;
+                return MaxSmallDateTimeValue;
             }
 
-            if (convertedDateTime < minSmallDateTimeValue)
+            if (convertedDateTime < MinSmallDateTimeValue)
             {
-                return minSmallDateTimeValue;
+                return MinSmallDateTimeValue;
             }
 
             return convertedDateTime;

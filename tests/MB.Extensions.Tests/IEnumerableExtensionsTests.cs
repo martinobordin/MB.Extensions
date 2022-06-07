@@ -25,7 +25,7 @@ namespace MB.Extensions.Tests
         [Fact]
         public void ForEachAsync_WorksForNullIEnumerable()
         {
-            IEnumerable<string>? list = new List<string> { "a", "b", "c"};
+            IEnumerable<string>? list = new List<string> { "a", "b", "c" };
             var callCount = 0;
             list.ForEach(x => callCount++);
             callCount.Should().Be(list.Count());
