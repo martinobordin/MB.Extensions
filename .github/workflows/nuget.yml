@@ -1,9 +1,9 @@
 name: Publish on NuGet
  
 on:
-  push:
-    branches: [ master ]
-    paths: [ 'src/**' ]
+  #push:
+    #branches: [ master ]
+    #paths: [ 'src/**' ]
   workflow_dispatch:
 
 env:
@@ -50,7 +50,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          tag_name: core_v${{ steps.nbgv.outputs.NuGetPackageVersion }}
+          tag_name: v${{ steps.nbgv.outputs.NuGetPackageVersion }}
           release_name: Release v${{ steps.nbgv.outputs.NuGetPackageVersion }}
           draft: false
           prerelease: false
