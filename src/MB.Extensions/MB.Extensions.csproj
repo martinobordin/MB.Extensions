@@ -11,6 +11,9 @@
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/martinobordin/MB.Extensions</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IsPublishable>True</IsPublishable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
