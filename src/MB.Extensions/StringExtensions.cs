@@ -14,7 +14,7 @@ namespace MB.Extensions
         /// <param name="maxlenght">The maxlenght.</param>
         /// <param name="truncateChars">The truncate chars.</param>
         /// <returns></returns>
-        public static string Truncate(this string? value, int maxlenght, string truncateChars = "")
+        public static string Truncate(this string value, int maxlenght, string truncateChars = "")
         {
             if (string.IsNullOrWhiteSpace(value))
             {

@@ -5,7 +5,13 @@
     /// </summary>
     public static class DateTimeExtensions
     {
+        /// <summary>
+        /// The minimum value for small date time 
+        /// </summary>
         public static readonly DateTime MinSmallDateTimeValue = new DateTime(1900, 01, 01);
+        /// <summary>
+        /// The maximum value for small date time 
+        /// </summary>
         public static readonly DateTime MaxSmallDateTimeValue = new DateTime(2079, 06, 06);
 
         /// <summary>

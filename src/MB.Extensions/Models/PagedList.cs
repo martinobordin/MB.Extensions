@@ -10,13 +10,6 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="PagedList{T}"/> class.
         /// </summary>
-        public PagedList()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PagedList{T}"/> class.
-        /// </summary>
         /// <param name="items">The items.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="pageSize">Size of the page.</param>
@@ -37,11 +30,11 @@
                 throw new ArgumentOutOfRangeException(nameof(pageSize));
             }
 
-            var list = items as IList<T> ?? items.ToList();
+            var list = items.ToList();
             var totalItemCount = list.Count;
             this.PagingInfo = new PagingInfo(pageNumber, pageSize, totalItemCount);
 
-            Result = list?.Skip(pageNumber * pageSize).Take(pageSize).ToList();
+            Result = list.Skip(pageNumber * pageSize).Take(pageSize).ToList();
         }
 
         /// <summary>
