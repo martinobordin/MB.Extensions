@@ -39,5 +39,16 @@
         {
             return new DateTime(date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second, 0, date.Kind);
         }
+
+        /// <summary>
+        /// Converts utc date to specific timeZone.
+        /// </summary>
+        /// <param name="date">The date.</param>
+        /// <param name="timeZone">The time zone.</param>
+        /// <returns></returns>
+        public static DateTime ToTimeZone(this DateTime date, TimeZoneInfo timeZone)
+        {
+            return TimeZoneInfo.ConvertTime(new DateTime(date.Ticks, DateTimeKind.Utc), timeZone);
+        }
     }
 }
