@@ -4,3 +4,8 @@
 
 This is an evergrowing collection of helpers, utilities and extensions for .net
 
+# Installation
+Install using Nuget
+
+        PM> Install-Package MB.Extensions
+

@@ -3,7 +3,7 @@
 namespace MB.Extensions
 {
     /// <summary>
-    /// Extensions for IQueryableExtensions
+    /// Extensions for IQueryable
     /// </summary>
     public static class IQueryableExtensions
     {
