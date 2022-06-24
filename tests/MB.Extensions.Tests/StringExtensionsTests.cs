@@ -51,5 +51,15 @@ namespace MB.Extensions.Tests
             var result = myString.Truncate(10, "...");
             result.Should().Be("thisstring");
         }
+
+        [Fact]
+        public void Base64EncodeDecode_Works()
+        {
+            var myString = "thisstring";
+            var myStringEncoded = "dGhpc3N0cmluZw==";
+            
+            myString.Base64Encode().Should().Be(myStringEncoded);
+            myStringEncoded.Base64Decode().Should().Be(myString);
+        }
     }
 }
