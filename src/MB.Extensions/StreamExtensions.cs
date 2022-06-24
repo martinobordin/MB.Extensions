@@ -5,6 +5,11 @@
     /// </summary>
     public static class StreamExtensions
     {
+        /// <summary>
+        /// Converts to bytearray.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns></returns>
         public static byte[] ToByteArray(this Stream input)
         {
             using (var ms = new MemoryStream())
